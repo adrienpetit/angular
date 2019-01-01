@@ -1,0 +1,39 @@
+<div class="container">
+      <div class="card border-primary " style="margin:1rem">
+        <div class="card-header">Ajouter catégorie</div>
+        <div class="card-body">
+            <form #f="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group has-success">
+                  <label class="form-control-label">Titre</label>
+                  <input type="text" class="form-control" [(ngModel)]="newCategory.title" name="titre"
+                         placeholder="Titre" required minlength="4" #name="ngModel" pattern="[a-zA-Zéàèç]*" 
+                         minlength="4">
+                </div>
+              
+                <div class="alert alert-danger" role="alert"  [hidden]="name.valid" > 
+
+                  <div *ngIf="name.errors?.required" > 
+                   Un titre est requis
+                  </div>
+
+                  <div *ngIf="name.errors?.pattern" > 
+                    titre non valid
+                  </div>
+
+                  <div *ngIf="name.errors?.minlength" > 
+                    titre trop court
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" rows="3" [(ngModel)]="newCategory.description" name="description" placeholder="Category description"></textarea>
+                </div>
+                
+              
+                <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Rajouter catégorie</button>
+              </form>
+        </div>
+      </div>
+    </div>

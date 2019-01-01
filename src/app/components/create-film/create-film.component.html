@@ -1,0 +1,49 @@
+<!-- Display the error messages -->
+<div id="form-error" style="display: none; color: red; size: 20px;">
+    Remplissez tous les champs
+  </div>
+  <div id="send-error" style="display: none; color: red; size: 20px;">
+    Erreur lors de l'envoie des données, veuillez verifier votre connexion
+  </div>
+
+  <div class="container">
+   <div class="card border-primary " style="margin:1rem">
+        
+         <div class="card-header">Rajouter Film</div>
+         <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+          <div class="form-group has-success">
+              <label class="form-control-label">Titre</label>
+              <input type="text" class="form-control is-valid" [(ngModel)]="newFilms.title" name="title">
+            </div>
+          
+    
+            <div class="form-group">
+                <label>Résumé</label>
+                <textarea class="form-control" rows="3" [(ngModel)]="newFilms.content" name="content"></textarea>
+              </div>
+
+    
+        <div class="form-group">
+          <label>Image</label>
+          <input class="form-control"  type="url"  [(ngModel)]="newFilms.image" name="img" #date="ngModel" required>
+        </div>
+        <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" [(ngModel)]="newFilms.category.id" name="category">
+                  <option *ngFor="let category of categories" [ngValue]="category.id">{{ category.title }}</option>
+              </select>
+            </div>
+
+          <button type="submit" class="btn btn-success">
+            Ajouter
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+                
+            
+               
+

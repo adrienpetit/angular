@@ -1,0 +1,26 @@
+<div id="form-error" style="display: none; color: red; size: 20px;">
+  Remplissez tous les champs s'il vous plait!
+</div>
+<div id="send-error" style="display: none; color: red; size: 20px;">
+  Erreur !
+</div>
+
+<div class="container">
+    <div class="card border-primary " style="margin:1rem">
+      <div class="card-header">Commentaire</div>
+    <div class="card-body">
+    <form style="width:25%;" (ngSubmit)="onSubmit()">
+      <div class="form-group has-success">
+        <label class="form-control-label">Autheur</label>
+        <input type="text" class="form-control is-valid" [(ngModel)]="newComment.author" name="author">
+      </div>
+
+      <div class="form-group">
+        <label class="form-control-label">Commentaire</label>
+        <textarea class="form-control" rows="3" [(ngModel)]="newComment.content" name="content"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Publier</button>
+    </form>
+  </div>
+</div>  

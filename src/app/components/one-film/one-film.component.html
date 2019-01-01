@@ -1,0 +1,27 @@
+  <div class="container">
+    <div class="card border-primary " style="margin:1rem">
+      <div class="card-header"><h3> {{ films.title }} </h3><br/> <h6>{{ films.category.title }}  </h6></div>
+      <div class="card-body">
+        <div class="content">
+          <img src="{{ films.image }}" alt="">
+        
+        <p class="card-text">{{ films.content }}</p>
+          </div>
+       
+      </div>
+      <div style="padding:20px;">
+        <button class="btn btn-primary"  [routerLink]="['/films']">Menu</button> &nbsp;
+      </div>
+    </div>
+  </div>
+<div class="container">
+    <div class="card border-primary " style="margin:1rem">
+       <div style="padding:20px;">
+        <button class="btn btn-primary"  [routerLink]="['/newcomment',films.id]">Ajouter commentaire</button> &nbsp;
+       </div>
+       <div class="card-body">
+        <p class="card-text">{{ comment.author }}</p>
+        <p class="card-text">{{ comment.content }}</p>
+      </div>
+ </div>
+</div>

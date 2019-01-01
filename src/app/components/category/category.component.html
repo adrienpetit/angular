@@ -1,0 +1,14 @@
+<div *ngFor="let cat of category">
+  <div class="container">
+    <div class="card border-primary " style="margin:1rem">
+      <div class="card-header">{{ cat.title }}</div>
+      <div class="card-body">
+        <p class="card-text">{{ cat.description }}</p>
+      </div>
+      <div style="padding:20px;">
+        <button class="btn btn-primary" [routerLink]="['/updateCategory', cat.id]">Modifier</button> &nbsp;
+       
+      </div>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,29 @@
+
+
+<div id="form-error" style="display: none; color: red; size: 20px;">
+  Remplissez tous les champs
+</div>
+<div id="send-error" style="display: none; color: red; size: 20px;">
+  Erreur lors de l'envoie des données, veuillez verifier votre connexion
+</div>
+
+<div class="container">
+  <div class="card border-primary " style="margin:1rem">
+    <div class="card-header">Modifier catégorie</div>
+    <div class="card-body">
+    <form style="width:25%;" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="form-control-label">Titre</label>
+      <input type="text" class="form-control is-valid" [(ngModel)]="categories.title" name="title">
+    </div>
+
+     <div class="form-group">
+          <label for="exampleTextarea">Description</label>
+          <textarea class="form-control" rows="3" [(ngModel)]="categories.description" name="description"></textarea>
+        </div>
+
+  <button type="submit" class="btn btn-primary">Modifier</button>
+  </form>
+</div>
+</div>
+</div>
