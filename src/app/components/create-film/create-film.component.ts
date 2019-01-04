@@ -33,7 +33,7 @@ export class CreateFilmComponent implements OnInit {
   	 
   
   }
-  
+  //Get categories
    getCategories() {
     this.categoryService.getCategorys().subscribe(
       (data) => {
@@ -45,7 +45,7 @@ export class CreateFilmComponent implements OnInit {
     );
   }
  
-
+  //Create a movie
    onSubmit() {
      let newFilms = {
       'title': this.newFilms.title,

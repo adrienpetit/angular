@@ -30,6 +30,7 @@ comment: Comment;
     //this.getComment();
     
   }
+  //Get movie
   getFilm() {
     let id = this.route.snapshot.paramMap.get('id');
     this.filmsService.getFilm(id).subscribe(
@@ -41,6 +42,7 @@ comment: Comment;
       }
     );
   }
+  //Get comments
    getComment() {
    	let id = this.route.snapshot.paramMap.get('id');
     this.commentService.getComment(id).subscribe(

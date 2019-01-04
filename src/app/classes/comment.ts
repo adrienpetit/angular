@@ -1,5 +1,5 @@
 
-/** Class of a comment */
+// Comment class
 
 export class Comment {
 

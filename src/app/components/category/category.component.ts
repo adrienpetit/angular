@@ -21,6 +21,7 @@ search: string = "All";
   ngOnInit() {
   	 this.getCategories();
   }
+  //Get all categories
    getCategories() {
     this.categoryService.getCategorys().subscribe(
       (data) => {
@@ -32,7 +33,6 @@ search: string = "All";
     );
   }
    showAlert(id) {
-    /* Function to display the selector to confirm the deletion */
     let display = document.getElementById(id).style.display;
     
     if (display == "block") { document.getElementById(id).style.display = "none"; }

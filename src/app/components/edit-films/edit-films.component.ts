@@ -17,21 +17,18 @@ export class EditFilmsComponent implements OnInit {
   films: Films;
   categories: Category[];
 
-  /**
-  * Construct the component
-  */
+  
   constructor(private route: ActivatedRoute,
               private router: Router,
               private jeuService: FilmsService,
               private categoryService: CategoryService) { }
 
-  /** Recover one task, categories and states to display */
   ngOnInit() {
     this.getFilm();
     this.getCategories();
   }
 
-  /** Recover the task to display with the id in URL */
+  //Get movie
   getFilm() {
     let id = this.route.snapshot.paramMap.get('id');
     this.jeuService.getFilm(id).subscribe(
@@ -44,7 +41,7 @@ export class EditFilmsComponent implements OnInit {
     );
   }
 
-  /** Recover the categories */
+  //Get all categories
   getCategories() {
     this.categoryService.getCategorys().subscribe(
       (data) => {
@@ -56,7 +53,7 @@ export class EditFilmsComponent implements OnInit {
     );
   }
 
-  /** Confirm the modification */
+  //Edit movie
   onSubmit() {
     let newFilms = {
       'title': this.films.title,

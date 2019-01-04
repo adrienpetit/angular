@@ -21,6 +21,7 @@ comment: Comment[];
   ngOnInit() {
   	//this.getComment();
   }
+  //Get comment of a movie
    /*getComment() {
     this.commentService.getComments().subscribe(
       (data) => {

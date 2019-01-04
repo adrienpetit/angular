@@ -19,7 +19,7 @@ export class EditCategoryComponent implements OnInit {
   ngOnInit() {
   this.getCategory();
   }
-
+//Get a category
   getCategory() {
     let id = this.route.snapshot.paramMap.get('id');
     this.categoryService.getCategory(id).subscribe(
@@ -33,7 +33,7 @@ export class EditCategoryComponent implements OnInit {
   }
 
  
-
+  //Edit category
   onSubmit() {
     
 

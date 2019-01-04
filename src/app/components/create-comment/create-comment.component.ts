@@ -27,6 +27,7 @@ films : Films;
   ngOnInit() {
     this.getFilm();
   }
+  //Get a movie
   getFilm() {
     let id = this.route.snapshot.paramMap.get('id');
     this.filmsService.getFilm(id).subscribe(
@@ -38,6 +39,7 @@ films : Films;
       }
     );
   }
+  //Create a comment for a movie
   onSubmit(){
   if (this.newComment.author !== undefined && this.newComment.content !== undefined) {
 

@@ -24,6 +24,7 @@ export class FilmsComponent implements OnInit {
    
   
   }
+  /*Get movies*/
    getFilms() {
     this.filmsService.getFilms().subscribe(
       (data) => {
@@ -46,7 +47,7 @@ export class FilmsComponent implements OnInit {
     if (display == "block") { document.getElementById(id).style.display = "none"; }
     else { document.getElementById(id).style.display = "block"; }
   }
-
+  /*Delete a movie*/
   deleteFilms(id) {
     this.filmsService.deleteFilm(id).subscribe(
       (data) => {

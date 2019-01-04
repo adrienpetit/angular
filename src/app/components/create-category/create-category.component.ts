@@ -19,6 +19,7 @@ newCategory: Category;
 
   ngOnInit() {
   }
+  //Create a category
   onSubmit(){
   if (this.newCategory.title !== undefined && this.newCategory.description !== undefined) {
 

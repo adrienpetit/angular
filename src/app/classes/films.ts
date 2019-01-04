@@ -1,8 +1,7 @@
 import { Category } from "./category";
 import { Comment } from "./comment";
 
-/** Class of a movie */
-
+//Movie class
 export class Films {
 	public id: number;
 	public title: string;
